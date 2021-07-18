@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="main.css" />        
+        <title>Frontend Mentor | Tip calculator app</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="heading">spli<br />tter</h1>
+            <div class="card">
+                <div class="card__calculate">
+                    <div class="card__bill">
+                        <label for="">Bill</label>                        
+                        <input class ='input input-bill' type="number" />
+                        <img class='card__icon' src="./images/icon-dollar.svg"></img>
+                    </div>
+                    <div class="card__select-tip">
+                        <label for="#">Select Tip %</label>
+                        <div class="button-grid">
+                            <button class="btn btn-dark">5%</button>
+                            <button class="btn btn-dark">10%</button>
+                            <button class="btn btn-dark">15%</button>
+                            <button class="btn btn-dark">25%</button>
+                            <button class="btn btn-dark">50%</button>
+                            <input class ='input input-custom'
+                                type="number"
+                                placeholder="Custom"
+                            />
+                        </div>
+                    </div>
+                    <div class="card__number-of-people">
+                        <div class="card__number-of-people--container">
+                            <label for="">Number of People</label>
+                            <p class="error-text hidden">Can't be zero</p>
+                        </div>                        
+                        <input class ='input input-num' type="number" />
+                        <img class='card__icon' src="./images/icon-person.svg"></img>
+                    </div>
+                </div>
+                <div class="card__display">
+                    <div class="card__tip">
+                        <p class="card__tip-heading">
+                            Tip Amount <br />
+                            <span class="card__tip-sub-heading">/ person</span>
+                        </p>
+
+                        <p class="card__tip-amount">$4.27</p>
+                    </div>
+
+                    <div class="card__total">
+                        <p class="card__total-heading">
+                            Total Amount <br />
+                            <span class="card__total-sub-heading">
+                                / person
+                            </span>
+                        </p>
+                        <p class="card__total-amount">$34.27</p>
+                    </div>
+                    <button id="reset" class="btn btn-disabled">RESET</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

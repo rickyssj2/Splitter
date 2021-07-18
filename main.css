@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: 'Space Mono', monospace;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* styling */
+body {
+  background-color: #c5e4e7;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.4rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 563px) {
+  .container {
+    height: 100%;
+  }
+}
+
+.heading {
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #5e7a7d;
+}
+
+@media screen and (max-width: 563px) {
+  .heading {
+    margin-top: 5rem;
+  }
+}
+
+.card {
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 563px) {
+  .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.card__calculate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #5e7a7d;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.card__display {
+  background-color: #00494d;
+  border-radius: 1rem;
+  color: #f4fafa;
+  padding: 4rem 2rem 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.card__display button {
+  margin-top: auto;
+}
+
+.card__icon {
+  width: 1rem;
+  display: inline-block;
+  position: absolute;
+  top: 4.1rem;
+  left: 1.5rem;
+}
+
+.card__tip, .card__total {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__tip-heading, .card__total-heading {
+  font-size: 1.2rem;
+}
+
+.card__tip-sub-heading, .card__total-sub-heading {
+  color: #7f9c9f;
+  font-size: 1rem;
+}
+
+.card__tip-amount, .card__total-amount {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #26c0ab;
+}
+
+.card__bill, .card__number-of-people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.card__number-of-people--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.card__number-of-people--container p {
+  color: #e67812;
+}
+
+.card__number-of-people--container p.hidden {
+  display: none;
+}
+
+.button-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 2.4rem;
+}
+
+.btn-dark {
+  background-color: #00494d;
+  color: #f4fafa;
+}
+
+.btn-dark:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.btn-light {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.btn-light:hover {
+  background-color: #c5e4e7;
+}
+
+.btn-grey {
+  color: #5e7a7d;
+  background-color: #f4fafa;
+}
+
+.btn-disabled {
+  background-color: rgba(0, 131, 138, 0.644);
+  color: rgba(0, 73, 77, 0.808);
+  cursor: initial;
+}
+
+.input {
+  border: none;
+  background-color: #f4fafa;
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  text-align: right;
+  caret-color: #26c0ab;
+  color: #00494d;
+  font-weight: 700;
+  font-size: 2.4rem;
+  position: relative;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+.input::-webkit-outer-spin-button, .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input:focus, .input:active {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 0px 2px #26c0ab;
+          box-shadow: 0px 0px 0px 2px #26c0ab;
+}
+
+.input-custom {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.input-error {
+  -webkit-box-shadow: 0px 0px 0px 2px #e67812;
+          box-shadow: 0px 0px 0px 2px #e67812;
+  caret-color: #e67812;
+}
+
+.input-error:focus, .input-error:active {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 0px 2px #e67812;
+          box-shadow: 0px 0px 0px 2px #e67812;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #5e7a7d;
+  font-weight: 700;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #5e7a7d;
+  font-weight: 700;
+  text-align: center;
+}
+
+::-ms-input-placeholder {
+  color: #5e7a7d;
+  font-weight: 700;
+  text-align: center;
+}
+
+::placeholder {
+  color: #5e7a7d;
+  font-weight: 700;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
